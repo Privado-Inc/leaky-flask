@@ -13,6 +13,8 @@ FLASK_APP=run.py flask run
 
 ### Third Party Sharing
  - Sentry
+ - Slack
+ - Sendgrid
 
 ### Storage
  - Local DB via `sqlite`
