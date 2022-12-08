@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Send Notification Mail to User {% endblock %}</h1>
+    <form method="post">
+        <label for="firstname">First Name</label>
+        <br>
+        <input type="text" name="firstname"
+                placeholder="Prashant"
+                value="{{ request.form['firstname'] }}"></input>
+        <br>
+        <br>
+
+        <label for="message">Message</label>
+        <br>
+        <textarea name="message"
+                placeholder="Message Content"
+                rows="20"
+                cols="80"
+                value="{{ request.form['message'] }}"></textarea>
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

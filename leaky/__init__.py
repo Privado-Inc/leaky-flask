@@ -44,5 +44,7 @@ def create_app():
 
     with app.app_context():
         from . import users
+        from . import admin
         app.register_blueprint(users.bp)
+        app.register_blueprint(admin.bp)
         return app

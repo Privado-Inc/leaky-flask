@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add a New User {% endblock %}</h1>
+    <form method="post">
+        <label for="firstname">First Name</label>
+        <br>
+        <input type="text" name="firstname"
+                placeholder="Prashant"
+                value="{{ request.form['firstname'] }}"></input>
+        <br>
+        <br>
+
+        <label for="lastname">Last Name</label>
+        <br>
+        <input type="text" name="lastname"
+                placeholder="Mahajan"
+                value="{{ request.form['lastname'] }}"></input>
+        <br>
+        <br>
+
+        <label for="Location">Location</label>
+        <br>
+        <input type="text" name="location"
+                placeholder="Pune"
+                value="{{ request.form['location'] }}"></input>
+        <br>
+        <br>
+
+        <label for="Location">Age</label>
+        <br>
+        <input type="number" name="age"
+                min="10" max="100"
+                value="{{ request.form['age'] }}"></input>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
