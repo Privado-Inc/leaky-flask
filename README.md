@@ -19,3 +19,6 @@ FLASK_APP=run.py flask run
 ### Storage
  - Local DB via `sqlite`
 
+### Leaks
+ - Python `logging`
+
