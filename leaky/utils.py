@@ -1,12 +1,10 @@
-import os
+import logging
 import sqlite3
-from pathlib import Path
-from slack_sdk import WebClient
-from slack_sdk.errors import SlackApiError
+
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-
-import logging
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
 DB_PATH = "users.db"
 client = WebClient(token="WOLOLO")

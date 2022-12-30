@@ -1,7 +1,6 @@
-import sqlite3
+from flask import Blueprint, jsonify, request, render_template
+from sentry_sdk import capture_exception
 
-from flask import Blueprint, jsonify, session, request, render_template
-from sentry_sdk import capture_message, capture_exception 
 from .utils import send_mail
 
 bp = Blueprint("admin", __name__)
