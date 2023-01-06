@@ -25,3 +25,7 @@ def notify():
             return jsonify({"error": "could not send mail"})
     
     return render_template('notify.html')
+
+@bp.route("/admin/<string:username>")
+def view(username):
+    return render_template('notify.html')
