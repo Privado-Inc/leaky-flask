@@ -17,6 +17,28 @@ flask db downgrade
 python app.py
 ```
 
+### API endpoints
+<br/>
+
+#### GET
+`Get user by Id` [http://127.0.0.1:5000/users/1]() 
+<br/>
+
+#### POST
+`Create user` [http://127.0.0.1:5000/users]() 
+
+`Request Body`:
+
+```
+{
+        "firstname": "Hitesh",
+	"address": "India",
+	"age": 12
+}
+```
+
+<br/>
+
 
 ### Third Party Sharing
  - Sentry
@@ -31,3 +53,6 @@ python app.py
 
 #### Skeleton Reference
 https://plainenglish.io/blog/flask-crud-application-using-mvc-architecture
+
+#### Sentry Integration Reference
+https://docs.sentry.io/platforms/python/guides/flask/
