@@ -5,7 +5,7 @@ A Flask app that leaks or shares important PII data to local as well as third pa
 ## Build and Run
 
 ```
-python -m venv .venv
+python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
 
