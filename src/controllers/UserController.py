@@ -7,6 +7,7 @@ from flask import render_template, redirect, url_for, request, abort
 import json
 from src.models.User import User
 from flask import jsonify
+from src.client.SlackClient import send_message
 
 # from flask_sqlalchemy import SQLAlchemy
 # db = SQLAlchemy()
@@ -25,7 +26,9 @@ def store():
             db.create_all()
             db.session.add(user)
             db.session.commit()
-            return jsonify({"success": f"Successfully created {user}"})
+            message = f"Created new user {user.firstname}"
+            send_message(message)
+            return jsonify({"success": message})
         except Exception as e:
             print(traceback.format_exc())
             return 'There was an issue adding your task'

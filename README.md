@@ -51,7 +51,7 @@ python app.py
 ### Leaks
  - Python `logging`
 
-#### Skeleton Reference
+#### Flask Skeleton Reference
 https://plainenglish.io/blog/flask-crud-application-using-mvc-architecture
 
 #### Sentry Integration Reference
