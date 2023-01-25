@@ -5,6 +5,8 @@ import traceback
 from flask import render_template, redirect, url_for, request, abort
 
 import json
+
+from app import app
 from src.models.User import User
 from flask import jsonify
 from src.client.SlackClient import send_message
@@ -30,6 +32,7 @@ def store():
             send_message(message)
             return jsonify({"success": message})
         except Exception as e:
+            app.logger.info('%s Failure while creating new user', user.username)
             print(traceback.format_exc())
             return 'There was an issue adding your task'
 
